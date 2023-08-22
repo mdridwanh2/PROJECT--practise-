@@ -1,0 +1,208 @@
+/* ================================= help css here ================================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: #000;
+    transition: all 0.3s ease-in;
+    font-family: sans-serif;
+}
+a{
+    text-transform: capitalize;
+}
+p{
+    font-size: 16px;
+}
+:root{
+    --nav-bg-color:#f2f0f5;
+    --nav-text-color:#f4f4f5;
+
+    --tob-nav-bg-color:#11023a;
+    --tob-nav-text-color:#f8f8fa;
+
+    --nav-hover-text-color:#fa02c4;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 3%;
+}
+
+
+
+/* ================================= header here ================================= */
+/* --------------- tob-na-bar --------------- */
+
+header{
+    z-index: 1000;
+}
+
+.top-nav-bar{
+    background-color: var(--tob-nav-bg-color);
+}
+.top-nav-cnt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.call-us{
+    padding: 05px 0;
+}
+.call-us p{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+    color: var(--tob-nav-text-color);
+}
+.call-us p a:hover{
+    color: var(--nav-hover-text-color);
+}
+.call-us p a{
+    color: var(--tob-nav-text-color);
+}
+.socail-contact-us{
+    text-align: right;
+    padding: 05px 0;
+}
+.socail-contact-us i{
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--tob-nav-text-color);
+}
+.socail-contact-us i:not(:last-child){
+    margin-right: 10px;
+}
+.socail-contact-us i:hover{
+   color: var(--nav-hover-text-color);
+}
+
+
+
+
+/* --------------- NAV-BAR HERE --------------- */
+nav{
+    background-color: var(--nav-bg-color);
+    position: relative;
+}
+.manu-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.logo a{
+    font-size: 35px;
+    font-weight: 600;
+}
+
+nav ul li{
+    display: inline-block;
+    position: relative;
+}
+nav ul li a{
+    display: block;
+    font-size: 16px;
+    padding: 15px;
+}
+.active{
+    color: var(--nav-hover-text-color);
+}
+
+nav ul li a:hover{
+    color: var(--nav-hover-text-color);
+}
+
+
+/* __________ form __________ */
+nav form{
+    display: flex;
+    align-items: center;
+}
+
+nav form input{
+    outline: none;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-left: 2px solid var(--tob-nav-bg-color);
+    width: 150px;
+    height: 35px;
+}
+nav form input:focus{
+    outline: none;
+}
+nav form button{
+    border: none;
+    padding: 07px 19px;
+    font-size: 17px;
+    outline: none;
+    background-color: var(--tob-nav-bg-color);
+    color: var(--nav-text-color);
+    cursor: pointer;
+}
+nav form button:focus{
+    outline: none;
+}
+nav form button:hover{
+    background-color: var(--nav-hover-text-color);
+}
+
+/* --------------- DROP MENU 01 --------------- */
+
+
+nav ul li:hover .drop-menu-01{
+    display: block;
+}
+
+.drop-menu-01{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: var(--nav-bg-color);
+    border-top: 2px solid;
+    width: 150px;
+    
+}
+.drop-menu-01 li{
+    width: 100%;
+    border-bottom: 1px dotted;
+    
+}
+.drop-menu-01 li:last-child{
+    border: none;
+}
+.down-line-icon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --------------- HUMBARGER --------------- */
+
+.humbarger{
+    cursor: pointer;
+    transition: all 0.42s ease-in-out;
+    display: none;
+}
+.humbarger span {
+	display: block;
+	width: 29px;
+	height: 2px;
+	background-color: #fa02c4;
+	margin: 7px 0;
+}
+
+.humbarger.active span:nth-child(1){
+    transform: translateY(5px) rotate(45deg);
+}
+
+.humbarger.active span:nth-child(3){
+    transform: translateY(-4px) rotate(-45deg);
+}
+
+.humbarger.active span:nth-child(2){
+    display: none;
+}
+
